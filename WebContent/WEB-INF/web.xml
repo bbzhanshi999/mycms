@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>myCms</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<!-- 配置一个servlet -->
+	<!-- servlet的配置 -->
+	<servlet>
+		<!-- servlet的内部名称，自定义。尽量有意义 -->
+		<servlet-name>LoginServlet</servlet-name>
+		<!-- servlet的类全名： 包名+简单类名 -->
+		<servlet-class>com.neuedu.mycms.controller.LoginServlet</servlet-class>
+	</servlet>
+	<!-- servlet的映射配置 -->
+	<servlet-mapping>
+		<!-- servlet的内部名称，一定要和上面的内部名称保持一致！！ -->
+		<servlet-name>LoginServlet</servlet-name>
+		<!-- servlet的映射路径（访问servlet的名称） -->
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	
+</web-app>
